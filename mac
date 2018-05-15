@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Welcome to the thoughtbot laptop script!
+# Welcome to the PICUS laptop script!
 # Be prepared to turn your laptop (or desktop, no haters here)
 # into an awesome development machine.
 
@@ -127,39 +127,14 @@ brew "vim"
 brew "watchman"
 brew "zsh"
 
-# Heroku
-brew "heroku"
-brew "parity"
-
-# GitHub
-brew "hub"
-
 # Image manipulation
 brew "imagemagick"
-
-# Testing
-brew "qt@5.5" if MacOS::Xcode.installed?
 
 # Programming language prerequisites and package managers
 brew "libyaml" # should come after openssl
 brew "coreutils"
-brew "yarn"
 cask "gpg-suite"
-
-# Databases
-brew "postgres", restart_service: :changed
-brew "redis", restart_service: :changed
 EOF
-
-if brew list | grep --silent "qt@5.5"; then
-  fancy_echo "Symlink qmake binary to /usr/local/bin for Capybara Webkit..."
-  brew unlink qt@5.5
-  brew link --force qt@5.5
-fi
-
-fancy_echo "Update heroku binary..."
-brew unlink heroku
-brew link --force heroku
 
 fancy_echo "Configuring asdf version manager..."
 if [ ! -d "$HOME/.asdf" ]; then
@@ -191,6 +166,14 @@ install_asdf_language() {
     asdf global "$language" "$version"
   fi
 }
+
+fancy_echo "Adding atom dotfiles..."
+if [ ! -d "$HOME/.atom" ]; then
+  git clone https://github.com/picuscreative/dotfiles ~/.atom --branch master
+else
+  git clone https://github.com/picuscreative/dotfiles ~/.atom/dotfiles --branch master
+  mv ~/.atom/dotfiles/.atom ~/.atom
+fi
 
 fancy_echo "Installing latest Ruby..."
 install_asdf_language "ruby"
