@@ -22,8 +22,6 @@ Bug reports for older versions are welcome.
 
 ## Install
 
-Install Atom from https://atom.io/
-
 Download the script:
 
 ```sh
@@ -47,8 +45,6 @@ Optionally, review the log:
 ```sh
 less ~/laptop.log
 ```
-
-Optionally, [copy picuscreative/dotfiles/.atom](https://github.com/picuscreative/dotfiles#atom) to your `~/.atom` directory.
 
 ## Debugging
 
@@ -76,6 +72,7 @@ Unix tools:
 * [Tmux] for saving project state and switching between projects
 * [Watchman] for watching for filesystem events
 * [Zsh] as your shell
+* [Oh My Zsh] will not make you a 10x developer...but you might feel like one.
 
 [Exuberant Ctags]: http://ctags.sourceforge.net/
 [Git]: https://git-scm.com/
@@ -85,17 +82,21 @@ Unix tools:
 [Tmux]: http://tmux.github.io/
 [Watchman]: https://facebook.github.io/watchman/
 [Zsh]: http://www.zsh.org/
+[Oh My Zsh]: http://ohmyz.sh/
 
 Image tools:
 
 * [ImageMagick] for cropping and resizing images
 
-Programming languages, package managers, and configuration:
+Programming languages, tools, package managers, and configuration:
 
 * [ASDF] for managing programming language versions
 * [Bundler] for managing Ruby libraries
 * [Node.js] and [NPM], for running apps and installing JavaScript packages
 * [Ruby] stable for writing general-purpose code
+* [Atom Settings] with editor settings and packages ready for development
+* [Vagrant] for development virtual machines
+* [Varying Vagrant Vagrants] for Wordpress development with Vagrant
 
 [Bundler]: http://bundler.io/
 [ImageMagick]: http://www.imagemagick.org/
@@ -103,8 +104,29 @@ Programming languages, package managers, and configuration:
 [NPM]: https://www.npmjs.org/
 [ASDF]: https://github.com/asdf-vm/asdf
 [Ruby]: https://www.ruby-lang.org/en/
+[Atom Settings]: https://github.com/picuscreative/dev-settings/tree/master/.atom
+[Vagrant]: https://www.vagrantup.com/
+[Varying Vagrant Vagrants]: https://varyingvagrantvagrants.org/
 
-It should take less than 15 minutes to install (depends on your machine).
+Day to day dependencies:
+
+* Atom
+* Google Chrome
+* Google Backup and Sync
+* Gyazo
+* Filezilla
+* Firefox
+* Iterm2
+* Postman
+* SequelPro
+* Skype
+* Slack
+* SourceTree
+* Spectacle
+* Toggl
+* VirtualBox
+
+It should take less than 30 minutes to install (depends on your machine and network conditions).
 
 ## Customize in `~/.laptop.local`
 

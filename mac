@@ -134,6 +134,24 @@ brew "imagemagick"
 brew "libyaml" # should come after openssl
 brew "coreutils"
 cask "gpg-suite"
+
+# Day-to-day binaries
+cask "google-chrome"
+cask "firefox"
+cask "slack"
+cask "atom"
+cask "iterm2"
+cask "postman"
+cask "sourcetree"
+cask "filezilla"
+cask "sequel-pro"
+cask "virtualbox"
+cask "skype"
+cask "toggl"
+cask "vagrant"
+cask "spectacle"
+cask "gyazo"
+cask "google-backup-and-sync"
 EOF
 
 fancy_echo "Configuring asdf version manager..."
@@ -167,13 +185,21 @@ install_asdf_language() {
   fi
 }
 
-fancy_echo "Adding atom dotfiles..."
-if [ ! -d "$HOME/.atom" ]; then
-  git clone https://github.com/picuscreative/dotfiles ~/.atom --branch master
-else
-  git clone https://github.com/picuscreative/dotfiles ~/.atom/dotfiles --branch master
-  mv ~/.atom/dotfiles/.atom ~/.atom
+fancy_echo "Adding atom settings and packages..."
+if [ -d "$HOME/.atom" ]; then
+  mv .atom/* ~/.atom
+  cat ~/.atom/package.list | xargs apm install
 fi
+
+fancy_echo "Oh My Zsh will not make you a 10x developer...but you might feel like one..."
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+fancy_echo "Installing Vagrant plugins..."
+vagrant plugin install vagrant-hostsupdater vagrant-triggers vagrant-vbguest
+
+fancy_echo "Installing Varying-Vagrant-Vagrants..."
+mkdir ~/Development
+git clone -b master git://github.com/Varying-Vagrant-Vagrants/VVV.git ~/Development/VVV
 
 fancy_echo "Installing latest Ruby..."
 install_asdf_language "ruby"
