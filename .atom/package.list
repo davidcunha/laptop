@@ -1,7 +1,7 @@
 busy-signal@1.4.3
 custom-app-icon@0.2.4
 editorconfig@2.2.2
-file-icons@2.1.19
+file-icons@2.1.21
 highlight-selected@0.13.1
 intentions@1.1.5
 jsx-comment@0.2.0
@@ -14,7 +14,8 @@ linter-ui-default@1.7.1
 minimap@4.29.8
 minimap-pigments@0.2.2
 pigments@0.40.2
+prettier-atom@0.53.0
 pretty-json@2.0.0
 svg-preview@0.12.1
 tabs-to-spaces@1.0.5
-teletype@0.13.1
+teletype@0.13.2
