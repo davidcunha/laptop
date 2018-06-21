@@ -107,7 +107,7 @@ Programming languages, tools, package managers, and configuration:
 [NPM]: https://www.npmjs.org/
 [ASDF]: https://github.com/asdf-vm/asdf
 [Ruby]: https://www.ruby-lang.org/en/
-[Atom Settings]: https://github.com/picuscreative/dev-settings/tree/master/.atom
+[Atom Settings]: https://github.com/picuscreative/laptop/tree/master/.atom
 [Vagrant]: https://www.vagrantup.com/
 [Varying Vagrant Vagrants]: https://varyingvagrantvagrants.org/
 
