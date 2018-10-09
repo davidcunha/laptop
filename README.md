@@ -12,10 +12,10 @@ based on what is already installed on the machine.
 
 We support:
 
-* macOS Mavericks (10.9)
-* macOS Yosemite (10.10)
-* macOS El Capitan (10.11)
-* macOS Sierra (10.12)
+- macOS Mavericks (10.9)
+- macOS Yosemite (10.10)
+- macOS El Capitan (10.11)
+- macOS Sierra (10.12)
 
 Older versions may work but aren't regularly tested.
 Bug reports for older versions are welcome.
@@ -56,78 +56,73 @@ Or, attach the whole log file as an attachment.
 
 ## What it sets up
 
-Atom configurations:
-* [dotfiles/.atom](https://github.com/picuscreative/dotfiles#atom) to your `~/.atom` directory.
-
 macOS tools:
 
-* [Homebrew] for managing operating system libraries.
+- [Homebrew] for managing operating system libraries.
 
-[Homebrew]: http://brew.sh/
+[homebrew]: http://brew.sh/
 
 Unix tools:
 
-* [Exuberant Ctags] for indexing files for vim tab completion
-* [Git] for version control
-* [OpenSSL] for Transport Layer Security (TLS)
-* [RCM] for managing company and personal dotfiles
-* [The Silver Searcher] for finding things in files
-* [Tmux] for saving project state and switching between projects
-* [Watchman] for watching for filesystem events
-* [Zsh] as your shell
-* [Oh My Zsh] will not make you a 10x developer...but you might feel like one.
+- [Exuberant Ctags] for indexing files for vim tab completion
+- [Git] for version control
+- [OpenSSL] for Transport Layer Security (TLS)
+- [RCM] for managing company and personal dotfiles
+- [The Silver Searcher] for finding things in files
+- [Tmux] for saving project state and switching between projects
+- [Watchman] for watching for filesystem events
+- [Zsh] as your shell
+- [Oh My Zsh] will not make you a 10x developer...but you might feel like one.
 
-[Exuberant Ctags]: http://ctags.sourceforge.net/
-[Git]: https://git-scm.com/
-[OpenSSL]: https://www.openssl.org/
-[RCM]: https://github.com/thoughtbot/rcm
-[The Silver Searcher]: https://github.com/ggreer/the_silver_searcher
-[Tmux]: http://tmux.github.io/
-[Watchman]: https://facebook.github.io/watchman/
-[Zsh]: http://www.zsh.org/
-[Oh My Zsh]: http://ohmyz.sh/
+[exuberant ctags]: http://ctags.sourceforge.net/
+[git]: https://git-scm.com/
+[openssl]: https://www.openssl.org/
+[rcm]: https://github.com/thoughtbot/rcm
+[the silver searcher]: https://github.com/ggreer/the_silver_searcher
+[tmux]: http://tmux.github.io/
+[watchman]: https://facebook.github.io/watchman/
+[zsh]: http://www.zsh.org/
+[oh my zsh]: http://ohmyz.sh/
 
 Image tools:
 
-* [ImageMagick] for cropping and resizing images
+- [ImageMagick] for cropping and resizing images
 
 Programming languages, tools, package managers, and configuration:
 
-* [ASDF] for managing programming language versions
-* [Bundler] for managing Ruby libraries
-* [Node.js] and [NPM], for running apps and installing JavaScript packages
-* [Ruby] stable for writing general-purpose code
-* [Atom Settings] with editor settings and packages ready for development
-* [Vagrant] for development virtual machines
-* [Varying Vagrant Vagrants] for Wordpress development with Vagrant
+- [ASDF] for managing programming language versions
+- [Bundler] for managing Ruby libraries
+- [Node.js] and [NPM], for running apps and installing JavaScript packages
+- [Ruby] stable for writing general-purpose code
+- [Vagrant] for development virtual machines
+- [Varying Vagrant Vagrants] for Wordpress development with Vagrant
 
-[Bundler]: http://bundler.io/
-[ImageMagick]: http://www.imagemagick.org/
-[Node.js]: http://nodejs.org/
-[NPM]: https://www.npmjs.org/
-[ASDF]: https://github.com/asdf-vm/asdf
-[Ruby]: https://www.ruby-lang.org/en/
-[Atom Settings]: https://github.com/picuscreative/laptop/tree/master/.atom
-[Vagrant]: https://www.vagrantup.com/
-[Varying Vagrant Vagrants]: https://varyingvagrantvagrants.org/
+[bundler]: http://bundler.io/
+[imagemagick]: http://www.imagemagick.org/
+[node.js]: http://nodejs.org/
+[npm]: https://www.npmjs.org/
+[asdf]: https://github.com/asdf-vm/asdf
+[ruby]: https://www.ruby-lang.org/en/
+[vagrant]: https://www.vagrantup.com/
+[varying vagrant vagrants]: https://varyingvagrantvagrants.org/
 
 Day to day dependencies:
 
-* Atom
-* Google Chrome
-* Google Backup and Sync
-* Gyazo
-* Filezilla
-* Firefox
-* Iterm2
-* Postman
-* SequelPro
-* Skype
-* Slack
-* SourceTree
-* Spectacle
-* Toggl
-* VirtualBox
+- Visual Studio Code
+- Google Chrome
+- Google Backup and Sync
+- Gyazo
+- Filezilla
+- Firefox
+- Iterm2
+- Postman
+- SequelPro
+- Skype
+- Slack
+- SourceTree
+- Spectacle
+- Toggl
+- VirtualBox
 
 It should take less than 30 minutes to install (depends on your machine and network conditions).
 
@@ -193,8 +188,8 @@ Follow shell style guidelines by using [ShellCheck] and [Syntastic].
 brew install shellcheck
 ```
 
-[ShellCheck]: http://www.shellcheck.net/about.html
-[Syntastic]: https://github.com/scrooloose/syntastic
+[shellcheck]: http://www.shellcheck.net/about.html
+[syntastic]: https://github.com/scrooloose/syntastic
 
 Thank you [Thoughbot](https://thoughtbot.com/) and [contributors!](https://github.com/picuscreative/laptop/graphs/contributors)
 

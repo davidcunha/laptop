@@ -8,7 +8,7 @@ fancy_echo() {
   local fmt="$1"; shift
 
   # shellcheck disable=SC2059
-  printf "\n$fmt\n" "$@"
+  printf "\\n$fmt\\n" "$@"
 }
 
 append_to_zshrc() {
@@ -23,9 +23,9 @@ append_to_zshrc() {
 
   if ! grep -Fqs "$text" "$zshrc"; then
     if [ "$skip_new_line" -eq 1 ]; then
-      printf "%s\n" "$text" >> "$zshrc"
+      printf "%s\\n" "$text" >> "$zshrc"
     else
-      printf "\n%s\n" "$text" >> "$zshrc"
+      printf "\\n%s\\n" "$text" >> "$zshrc"
     fi
   fi
 }
@@ -60,7 +60,7 @@ fi
 
 update_shell() {
   local shell_path;
-  shell_path="$(which zsh)"
+  shell_path="$(command -v zsh)"
 
   fancy_echo "Changing your shell to zsh ..."
   if ! grep "$shell_path" /etc/shells > /dev/null 2>&1 ; then
@@ -72,7 +72,7 @@ update_shell() {
 
 case "$SHELL" in
   */zsh)
-    if [ "$(which zsh)" != '/usr/local/bin/zsh' ] ; then
+    if [ "$(command -v zsh)" != '/usr/local/bin/zsh' ] ; then
       update_shell
     fi
     ;;
@@ -139,7 +139,7 @@ cask "gpg-suite"
 cask "google-chrome"
 cask "firefox"
 cask "slack"
-cask "atom"
+cask "visual-studio-code"
 cask "iterm2"
 cask "postman"
 cask "sourcetree"
@@ -156,7 +156,7 @@ EOF
 
 fancy_echo "Configuring asdf version manager..."
 if [ ! -d "$HOME/.asdf" ]; then
-  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.3.0
+  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.5.0
   append_to_zshrc "source $HOME/.asdf/asdf.sh" 1
 fi
 
@@ -177,19 +177,13 @@ install_asdf_plugin "nodejs" "https://github.com/asdf-vm/asdf-nodejs.git"
 install_asdf_language() {
   local language="$1"
   local version
-  version="$(asdf list-all "$language" | tail -1)"
+  version="$(asdf list-all "$language" | grep -v "[a-z]" | tail -1)"
 
   if ! asdf list "$language" | grep -Fq "$version"; then
     asdf install "$language" "$version"
     asdf global "$language" "$version"
   fi
 }
-
-fancy_echo "Adding atom settings and packages..."
-if [ -d "$HOME/.atom" ]; then
-  mv .atom/* ~/.atom
-  cat ~/.atom/package.list | xargs apm install
-fi
 
 fancy_echo "Oh My Zsh will not make you a 10x developer...but you might feel like one..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
