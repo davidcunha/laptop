@@ -1,5 +1,3 @@
-[<img width="110" src="https://avatars3.githubusercontent.com/u/38539999?s=200&v=4g" />](https://picuscreative.com)
-
 # Laptop
 
 Laptop is a script to set up an macOS laptop for web and mobile development based on [Thoughbot](https://thoughtbot.com/) [laptop project](https://github/thoughtbot/laptop).
@@ -192,7 +190,3 @@ brew install shellcheck
 [syntastic]: https://github.com/scrooloose/syntastic
 
 Thank you [Thoughbot](https://thoughtbot.com/) and [contributors!](https://github.com/picuscreative/laptop/graphs/contributors)
-
-## License
-
-[MIT License](https://opensource.org/licenses/MIT) - [PICUS](https://picuscreative.com)
